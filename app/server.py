@@ -37,3 +37,9 @@ async def dzielenie(request: InputDataModel, response: Response):
         response.status_code = e.status_code
         return {"wynik": None, "msg": msg}
     return {"wynik": wynik}
+
+@app.get("/lab_11", status_code.HTTP_200_OK)
+async def labowska():
+    msg = "Pod zostal zaktualizowany"
+    return {"msg": msg}
+
